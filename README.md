@@ -1,0 +1,2 @@
+# vibver
+Vibes Versioning Specification
