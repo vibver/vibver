@@ -1,0 +1,45 @@
+<html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta charset="UTF-8"><meta name="description" content="Vibe Versioning Specification"><meta name="keywords" content="Vibes, Vibe, Versioning, Version, Specification"><meta name="author" content="Arman Najafian"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"><link rel="icon" type="image/x-icon" href="favicon.ico?v=2"><title>Vibe Versioning Specification</title></head><body><div class="container"><h1>Vibe Versioning Specification</h1><h2>Summary</h2>
+<p>Given a vibe version VIBES.VIBES.VIBES, increment the:</p>
+<ol>
+<li>VIBES version with an appropriate emoji to describe the vibes of what you are about to release.</li>
+</ol>
+<h2>Introduction</h2>
+<p>For a very long time we have used vibe-less versioning for our software, releasing it with no way to vibe check dependencies. With many consumers of dependencies not
+having a way to understand the vibes at a glance of the software they are about to consume. Dependency vibe hell is when versions don't offer vibes which prevents you from performing
+vibe checks and lead to unexpected shifts in the current vibes of your project.</p>
+<p>As a solution to this problem, we propose a simple set of rules and requirements that dictate how version vibes are assigned and incremented. These rules are new and not based on any
+pre-existing widespread common practices in both closed and open source software. For this system to work you will need to declare a public API. Once you identify your public API,
+you communicate vibe changes to it with specific increments to your vibe versioning.</p>
+<p>We call this system &quot;Vibe Versioning&quot; or &quot;VibVer&quot; for short. Under this scheme the vibe versions and the way they change convey meaning about the underlying code and what vibes have changed
+from one version to another.</p>
+<h2>Vibe Versioning Specification (VibVer)</h2>
+<p>The key words &quot;MUST&quot;, &quot;MUST NOT&quot;, &quot;REQUIRED&quot;, &quot;SHALL&quot;, &quot;SHALL NOT&quot;, &quot;SHOULD&quot;,
+&quot;SHOULD NOT&quot;, &quot;RECOMMENDED&quot;, &quot;MAY&quot;, and &quot;OPTIONAL&quot; in this document are to be
+interpreted as described in <a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+<ol>
+<li>Software using vibe versioning MUST declare a public API.</li>
+<li>Software using vibe versioning MUST use emojis to declare the vibe version of their software.</li>
+</ol>
+<h3>Examples:</h3>
+<ul>
+<li>👍.🔥.🥲</li>
+<li>😈.🥳.🚀</li>
+</ul>
+<p>You can also append a <code>vv</code> prefix to the version which stands for vibe version.</p>
+<ul>
+<li>vv👍.🔥.🥲</li>
+<li>vv🫡.😶‍🌫️.👾</li>
+</ul>
+<h2>Backus–Naur Form Grammar for Valid VibVer Versions</h2>
+<pre><code>&lt;vibver&gt;         ::= [&lt;prefix&gt;] &lt;vibe-version&gt;
+&lt;prefix&gt;         ::= &quot;vv&quot;
+&lt;vibe-version&gt;   ::= &lt;emoji&gt; &quot;.&quot; &lt;emoji&gt; &quot;.&quot; &lt;emoji&gt;
+&lt;emoji&gt;          ::= UNICODE_EMOJI /* Valid Unicode emoji character */
+</code></pre>
+<h2>Why Use Vibe Versioning?</h2>
+<p>Spread the vibes with your software!</p>
+<h2>About</h2>
+<p>The Vibe Versioning specification was originally authored by <a href="https://armannajafian.com">Arman Najafian</a>, a vibes maximalist.</p>
+<p>If you'd like to leave feedback, please <a href="https://github.com/vibver/vibver/issues">open an issue on
+GitHub</a></p>
+</div></body></html>

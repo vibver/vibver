@@ -1,0 +1,42 @@
+package main
+
+import (
+	"context"
+	"io"
+)
+
+templ header(title string) {
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="UTF-8"/>
+		<meta name="description" content="Vibe Versioning Specification"/>
+		<meta name="keywords" content="Vibes, Vibe, Versioning, Version, Specification"/>
+		<meta name="author" content="Arman Najafian"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"/>
+		<link rel="icon" type="image/x-icon" href="favicon.ico?v=2"/>
+		<title>{ title }</title>
+	</head>
+}
+
+templ body(title string, content templ.Component) {
+	<body>
+		<div class="container">
+			<h1>{ title }</h1>
+			@content
+		</div>
+	</body>
+}
+
+templ indexPage(title string, content templ.Component) {
+	<html>
+		@header(title)
+		@body(title, content)
+	</html>
+}
+
+func Unsafe(html string) templ.Component {
+	return templ.ComponentFunc(func(ctx context.Context, w io.Writer) (err error) {
+		_, err = io.WriteString(w, html)
+		return
+	})
+}
