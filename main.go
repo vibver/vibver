@@ -26,7 +26,7 @@ func main() {
 
 	fileContent, err := os.ReadFile("vibver.md")
 	if err != nil {
-		log.Fatal("failed to read markdown file: %v", err)
+		log.Fatalf("failed to read markdown file: %v", err)
 	}
 
 	// Convert the markdown to HTML, and pass it to the template.
@@ -39,7 +39,7 @@ func main() {
 	content := Unsafe(buf.String())
 
 	// Write it out.
-	err = indexPage("Vibe Versioning Specification", content).Render(context.Background(), f)
+	err = indexPage("Vibe Versioning Specification","vv🥳.👍.🔥", content).Render(context.Background(), f)
 	if err != nil {
 		log.Fatalf("failed to write index page: %v", err)
 	}

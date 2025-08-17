@@ -18,19 +18,20 @@ templ header(title string) {
 	</head>
 }
 
-templ body(title string, content templ.Component) {
+templ body(title, version string, content templ.Component) {
 	<body>
 		<div class="container">
 			<h1>{ title }</h1>
+      <h6>Document Version: {version}</h6>
 			@content
 		</div>
 	</body>
 }
 
-templ indexPage(title string, content templ.Component) {
+templ indexPage(title, version string, content templ.Component) {
 	<html>
 		@header(title)
-		@body(title, content)
+		@body(title, version, content)
 	</html>
 }
 

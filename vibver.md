@@ -47,6 +47,17 @@ You can also append a `vv` prefix to the version which stands for vibe version.
 
 Spread the vibes with your software!
 
+Reviews from vibe experts: 
+>Finally, a versioning spec that speaks the universal language of emotion - VibVer lets your releases express their true energy, 
+>making version communication both delightful and instantly relatable! 🥳.👍.🔥
+>\- Vibe Expert, GitHub Copilot
+
+>VibVer brilliantly transforms version numbers into emotional storytelling, making software releases not just updates, but shared experiences that developers can instantly vibe with! 🌟
+>\- Vibe Expert, Claude Sonnet 3.5
+
+>VibVer is a revolutionary approach to versioning that brings joy and clarity to software releases, making it a must-adopt for any project looking to connect with its users on a deeper, more emotional level! 🚀🥳👍 
+>\- Vibe Expert, Gemini 2.0 Flash
+
 ## About
 
 The Vibe Versioning specification was originally authored by [Arman Najafian](https://armannajafian.com), a vibes maximalist.
